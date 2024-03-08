@@ -15,6 +15,7 @@ interface CVData {
   photo: string;
   name: string;
   lastName: string;
+  position: string;
   experience: Experience[];
   education: string[];
 }
@@ -22,6 +23,7 @@ interface CVData {
   photo: CvPhoto,
   name: 'Konrad',
   lastName: 'Alien',
+  position: 'Developer',
   experience: [
     { year: 2020, description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, quasi" },
     { year: 2021, description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, quasi" },
@@ -42,11 +44,32 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
    <main className="cv-main">
     <aside className="cv-aside">
-
+<h1>{CvData.name} {CvData.lastName}</h1>
+<img src={CvPhoto} alt="Cv Foto" />
+<h2>{CvData.position}</h2>
     </aside>
     <section className="cv-section">
-      <section className="cv-section-experience"></section>
-      <section className="cv-section-education"></section>
+      <table className="cv-section-experience">
+        <caption>Experience</caption>
+        <tbody>
+        {CvData.experience.map((experience, index) => (
+          <tr key={index}>
+           <th>{experience.year}</th>
+           <th>{experience.description}</th>
+          </tr>
+        ))}
+        </tbody>
+      </table>
+      <table className="cv-section-education">
+        <caption>Education</caption>
+        <tbody>
+          {CvData.education.map((education, index) => (
+            <tr key={index}>
+              <th>{education}</th>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </section>
    </main>
   </React.StrictMode>,
