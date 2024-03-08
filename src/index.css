@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+table {
+  text-align: left;
+  
+}
+th {
+  padding: 20px;
+}
+caption {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cv-main {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-grow: 0;
+  margin: 50px auto;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #c9c9c9;
+  border-radius: 5px;
+}
+
+.cv-aside {
+  margin-right: 30px;
+  padding: 20px 30px;
+  text-align: center;
+  background-color: #dfdede;
+  border-radius: 20px 0 ;
+
+}
+
+.cv-aside-foto {
+  width: 170px;
+  border-radius: 50%;
+  box-shadow: 7px 7px 14px -3px rgba(0,0,0,0.75);
+  margin: 20px 0;
+  
+}
+
+.cv-section {
+font-size: 0.8rem;
+}

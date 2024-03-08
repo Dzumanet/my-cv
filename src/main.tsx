@@ -42,10 +42,14 @@ interface CVData {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+   <header>
+    <h1>CV {CvData.name} {CvData.lastName}</h1>
+   </header>
    <main className="cv-main">
+    
     <aside className="cv-aside">
-<h1>{CvData.name} {CvData.lastName}</h1>
-<img src={CvPhoto} alt="Cv Foto" />
+<h2>{CvData.name} {CvData.lastName}</h2>
+<img className="cv-aside-foto" src={CvPhoto} alt="Cv Foto" />
 <h2>{CvData.position}</h2>
     </aside>
     <section className="cv-section">
